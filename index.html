@@ -2,22 +2,19 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script><!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <title>Humane Society Kittens</title>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script><!-- Latest compiled and minified CSS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-app="myApp">
 
-<div id="title">
+<div id="title" ng-controller ="MainController">
+    <h1>There are {{data.length}} kittens in your area ready to play!</h1>
 </div>
 
 <div id="container" ng-controller="MainController">
@@ -35,7 +32,7 @@
     <br>
     <div>
         <h5>Last update: {{lastupdate | date}}</h5>
-        <h5>Next Update: {{nextupdate | date}}</h5>
+        <h5>Next update: {{nextupdate | date}}</h5>
     </div>
 </div>
 

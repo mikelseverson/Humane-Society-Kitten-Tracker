@@ -17,11 +17,12 @@ app.controller('MainController', ['$scope', function($scope) {
                         $scope.lastupdate = responseData.thisversionrun;
                         $scope.nextupdate = responseData.nextrun;
                         console.log($scope.data);
+
                     }
                 );
             },
             error: function (xhr, status) {
-                //handle errors
+                console.log("data missing!!")
             }
         });
 }]);
