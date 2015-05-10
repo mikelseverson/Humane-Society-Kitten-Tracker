@@ -1,12 +1,11 @@
 body {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
+    width:60%;
+    margin: 0 auto;
     background-color: #b2cecf;
 }
 
 #title {
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -15,9 +14,14 @@ body {
 
 #container {
     text-align: center;
+    overflow: auto;
+
 }
 
-
+#footer {
+    display: block;
+    text-align: center;
+}
 .name {
     font-weight: bold;
 }

@@ -11,14 +11,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller ="MainController">
 
-<div id="title" ng-controller ="MainController">
+<div id="title">
     <h1>There are {{data.length}} kittens in your area ready to play!</h1>
 </div>
 
-<div id="container" ng-controller="MainController">
-    <div ng-repeat="kittens in data" class="col-md-6">
+<div id="container" class="container-fluid">
+    <div ng-repeat="kittens in data" class="col-lg-4">
         <div class="thumbnail">
             <p class="name"> {{ kittens.name | uppercase}} </p>
             <img ng-src="{{ kittens.picture.src }}">
@@ -29,11 +29,11 @@
             <br>
         </div>
     </div>
-    <br>
-    <div>
+</div>
+
+<div id="footer">
         <h5>Last update: {{lastupdate | date}}</h5>
         <h5>Next update: {{nextupdate | date}}</h5>
-    </div>
 </div>
 
 <script src="js/app.js"></script>
